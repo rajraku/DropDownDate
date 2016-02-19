@@ -1,0 +1,18 @@
+<html>
+	<head>
+		<title>This is an angular test app</title>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.0/angular.min.js" language="javascript"></script>
+		<script type="text/javascript" src="./app.js" language="javascript"></script>
+	</head>
+	<body ng-app="MyTestApp">
+		<h1>Welcome {{_$userDetails.UserName}}!!</h1>
+		<input type="text" ng-model="_$userDetails.UserName" autofocus />
+		<br />
+		<br />
+		<div ng-controller="OptionsController as opts">
+			<dropdown-date sd="startDateConfig.RangeStart" ed="startDateConfig.RangeEnd" ng-model="startDateConfig.SelectedDate"></dropdown-date>
+			<hr />
+			<dropdown-date sd="endDateConfig.RangeStart" ed="endDateConfig.RangeEnd" ng-model="endDateConfig.SelectedDate"></dropdown-date>			
+		</div>
+	</body>
+</html>

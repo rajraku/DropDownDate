@@ -1,0 +1,14 @@
+<div>
+<select ng-model='selectedYear'> <!-- ng-options='year.key as year.value for year in years track by year.key'  -->
+<option value=''>Year</option>
+<option ng-repeat="year in years" value="{{year.key}}" ng-selected="{{ selectedYear == year.key }}">{{year.value}}</option>
+</select>
+<select ng-model='selectedMonth'>  <!-- ng-options='month.key as month.value for month in months track by month.key' -->
+<option value='' ng-selected="{{ selectedMonth == ''}}">Month</option>
+<option ng-repeat="month in months" value="{{month.key}}" ng-selected="{{ selectedMonth == month.key}}">{{month.value}}</option>
+</select>
+<select ng-model='selectedDate'>  <!-- ng-options='day.key as day.value for day in days track by day.key' -->
+<option value=''  ng-selected="{{ selectedDate == '' }}">Date</option>
+<option ng-repeat="day in days" value="{{day.key}}" ng-selected="{{ selectedDate == day.key }}">{{day.value}}</option>
+</select>
+</div>
